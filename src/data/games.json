@@ -1,0 +1,82 @@
+{
+  "games": [
+    {
+      "id": "g1",
+      "title": "Cyber Nexus",
+      "description": "A futuristic cyberpunk adventure in a neon-lit metropolis",
+      "price": 59.99,
+      "rating": 4.8,
+      "genre": ["Action", "RPG"],
+      "releaseDate": "2025-10-15",
+      "developer": "NexusTech Games",
+      "publisher": "Digital Dreams",
+      "coverImage": "/assets/games/cyber-nexus.jpg",
+      "screenshots": [
+        "/assets/games/cyber-nexus-1.jpg",
+        "/assets/games/cyber-nexus-2.jpg",
+        "/assets/games/cyber-nexus-3.jpg"
+      ],
+      "features": [
+        "Open World Exploration",
+        "Character Customization",
+        "Multiple Endings",
+        "Real-time Combat"
+      ],
+      "systemRequirements": {
+        "minimum": {
+          "os": "Windows 10",
+          "processor": "Intel i5-8400",
+          "memory": "8 GB RAM",
+          "graphics": "NVIDIA GTX 1060",
+          "storage": "100 GB"
+        },
+        "recommended": {
+          "os": "Windows 11",
+          "processor": "Intel i7-10700K",
+          "memory": "16 GB RAM",
+          "graphics": "NVIDIA RTX 3070",
+          "storage": "100 GB SSD"
+        }
+      }
+    },
+    {
+      "id": "g2",
+      "title": "Stellar Quest",
+      "description": "Explore the vastness of space in this epic sci-fi adventure",
+      "price": 49.99,
+      "rating": 4.5,
+      "genre": ["Space", "Adventure"],
+      "releaseDate": "2025-09-01",
+      "developer": "Cosmic Studios",
+      "publisher": "Star Games",
+      "coverImage": "/assets/games/stellar-quest.jpg",
+      "screenshots": [
+        "/assets/games/stellar-quest-1.jpg",
+        "/assets/games/stellar-quest-2.jpg",
+        "/assets/games/stellar-quest-3.jpg"
+      ],
+      "features": [
+        "Procedurally Generated Planets",
+        "Space Combat",
+        "Trading System",
+        "Base Building"
+      ],
+      "systemRequirements": {
+        "minimum": {
+          "os": "Windows 10",
+          "processor": "Intel i3-8100",
+          "memory": "8 GB RAM",
+          "graphics": "NVIDIA GTX 1050",
+          "storage": "80 GB"
+        },
+        "recommended": {
+          "os": "Windows 10/11",
+          "processor": "Intel i5-10600K",
+          "memory": "16 GB RAM",
+          "graphics": "NVIDIA RTX 3060",
+          "storage": "80 GB SSD"
+        }
+      }
+    }
+  ]
+}

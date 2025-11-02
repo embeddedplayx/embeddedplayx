@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "username": "demo_user",
+      "email": "demo@example.com",
+      "password": "hashed_password_here",
+      "avatar": "/assets/avatars/default.jpg",
+      "memberSince": "2025-01-15",
+      "subscription": {
+        "plan": "pro",
+        "status": "active",
+        "renewalDate": "2025-12-15"
+      },
+      "preferences": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "en"
+      },
+      "gameLibrary": ["g1", "g2"],
+      "achievements": [
+        {
+          "gameId": "g1",
+          "name": "First Victory",
+          "unlockedDate": "2025-10-20"
+        }
+      ]
+    }
+  ]
+}

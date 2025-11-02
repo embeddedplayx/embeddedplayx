@@ -1,0 +1,90 @@
+@import '../abstracts/colors.scss';
+@import '../abstracts/variables.scss';
+@import '../abstracts/mixins.scss';
+
+.card {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: $bg-light;
+  
+  // Variants
+  &--default {
+    border: 1px solid rgba($text-primary, 0.1);
+  }
+  
+  &--hover {
+    @include hover-effect;
+  }
+  
+  &--glass {
+    @include glass-effect;
+  }
+  
+  &--clickable {
+    cursor: pointer;
+  }
+  
+  // Padding variations
+  &--padding-none {
+    padding: 0;
+  }
+  
+  &--padding-sm {
+    padding: $spacing-3;
+  }
+  
+  &--padding-md {
+    padding: $spacing-4;
+  }
+  
+  &--padding-lg {
+    padding: $spacing-6;
+  }
+
+  // Image
+  &__image {
+    position: relative;
+    width: 100%;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    &--16\/9 {
+      aspect-ratio: 16/9;
+    }
+    
+    &--4\/3 {
+      aspect-ratio: 4/3;
+    }
+    
+    &--1\/1 {
+      aspect-ratio: 1/1;
+    }
+    
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba($bg-darker, 0.8), transparent);
+      @include flex(row, flex-end, flex-start);
+      padding: $spacing-4;
+    }
+  }
+
+  // Body
+  &__body {
+    padding: $spacing-4;
+  }
+
+  // Footer
+  &__footer {
+    padding: $spacing-4;
+    border-top: 1px solid rgba($text-primary, 0.1);
+    background: rgba($bg-darker, 0.3);
+  }
+}

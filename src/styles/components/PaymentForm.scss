@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.payment-form {
+  @include flex(column, flex-start, stretch);
+  gap: $spacing-6;
+  padding: $spacing-4;
+  
+  &__header {
+    @include flex(row, space-between, center);
+    margin-bottom: $spacing-4;
+  }
+  
+  &__title {
+    font-size: $text-xl;
+    font-weight: $weight-bold;
+    margin: 0;
+    @include text-gradient;
+  }
+  
+  &__amount {
+    font-size: $text-2xl;
+    font-weight: $weight-bold;
+    // color: $color-accent;
+  }
+  
+  &__form {
+    @include flex(column, flex-start, stretch);
+    gap: $spacing-4;
+  }
+  
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-4;
+  }
+  
+  &__footer {
+    text-align: center;
+    color: $text-muted;
+    font-size: $text-base;
+    
+    p {
+      margin: 0;
+    }
+  }
+}

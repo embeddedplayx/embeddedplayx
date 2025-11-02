@@ -1,0 +1,49 @@
+{
+  "plans": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "price": 9.99,
+      "period": "month",
+      "features": [
+        "Access to basic games",
+        "HD streaming",
+        "Single device support",
+        "Basic customer support"
+      ],
+      "highlight": false,
+      "color": "primary"
+    },
+    {
+      "id": "pro",
+      "name": "Pro Gamer",
+      "price": 19.99,
+      "period": "month",
+      "features": [
+        "Access to all games",
+        "4K streaming",
+        "Multiple device support",
+        "Priority customer support",
+        "Exclusive in-game items",
+        "Early access to new games"
+      ],
+      "highlight": true,
+      "color": "secondary"
+    },
+    {
+      "id": "family",
+      "name": "Family Pack",
+      "price": 29.99,
+      "period": "month",
+      "features": [
+        "Everything in Pro Gamer",
+        "Up to 5 profiles",
+        "Parental controls",
+        "Family game collection",
+        "Shared achievements"
+      ],
+      "highlight": false,
+      "color": "accent"
+    }
+  ]
+}

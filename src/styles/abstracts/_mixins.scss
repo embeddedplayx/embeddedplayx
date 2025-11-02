@@ -1,0 +1,145 @@
+@use 'sass:color';
+@use 'colors' as c;
+@use 'variables' as v;
+@use 'typography' as t;
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($columns: 1, $gap: v.$spacing-4) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+  gap: $gap;
+}
+
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@mixin hover-effect {
+  transition: transform v.$transition-fast ease, box-shadow v.$transition-fast ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: v.$shadow-lg;
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: v.$container-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: v.$container-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: v.$container-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: v.$container-xl) { @content; }
+  }
+}
+
+@mixin text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: c.$gradient-primary;
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: v.$spacing-2 v.$spacing-4;
+  border: none;
+  border-radius: v.$radius-md;
+  font-family: t.$font-primary;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: all v.$transition-fast ease;
+  user-select: none;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(c.$color-primary, 0.3);
+  }
+}
+
+@mixin button-variant($color) {
+  background: linear-gradient(135deg, $color, color.adjust($color, $lightness: -10%));
+  color: c.$text-primary;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba($color, 0.4);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+@mixin input-base {
+  width: 100%;
+  padding: v.$spacing-3;
+  border: 1px solid rgba(c.$text-primary, 0.2);
+  border-radius: v.$radius-md;
+  background: rgba(c.$bg-light, 0.05);
+  color: c.$text-primary;
+  font-family: t.$font-primary;
+  font-size: t.$text-base;
+  transition: all v.$transition-fast ease;
+  
+  &:focus {
+    outline: none;
+    border-color: c.$color-primary;
+    box-shadow: 0 0 0 3px rgba(c.$color-primary, 0.1);
+  }
+  
+  &::placeholder {
+    color: #aa2421;
+  }
+}
+
+@mixin card-base {
+  background: c.$bg-light;
+  border-radius: v.$radius-lg;
+  overflow: hidden;
+  transition: all v.$transition-fast ease;
+}
+
+// Heading helper mixin - use like: @include heading('xl');
+@mixin heading($size) {
+  // Default settings
+  $font-family: t.$font-heading;
+  $font-weight: t.$weight-semibold;
+  $font-size: t.$text-xl;
+
+  @if $size == 'xs' {
+    $font-size: t.$text-xs;
+  } @else if $size == 'sm' {
+    $font-size: t.$text-sm;
+  } @else if $size == 'md' {
+    $font-size: t.$text-lg;
+  } @else if $size == 'lg' {
+    $font-size: t.$text-2xl;
+  } @else if $size == 'xl' {
+    $font-size: t.$text-3xl;
+  } @else if $size == '2xl' {
+    $font-size: t.$text-4xl;
+  }
+
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+}

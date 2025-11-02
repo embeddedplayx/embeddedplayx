@@ -1,0 +1,78 @@
+@import '../abstracts/colors.scss';
+@import '../abstracts/variables.scss';
+@import '../abstracts/mixins.scss';
+
+.input {
+  @include flex(column, flex-start, stretch);
+  gap: $spacing-2;
+  width: 100%;
+
+  &__label {
+    color: $text-secondary;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__field {
+    width: 100%;
+    padding: $spacing-3;
+    background: rgba($bg-lighter, 0.5);
+    border: 1px solid rgba($text-primary, 0.1);
+    border-radius: $radius-md;
+    color: $text-primary;
+    font-size: 1rem;
+    transition: all $transition-fast ease;
+    
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+    }
+    
+    &--error {
+      border-color: $color-danger;
+      
+      &:focus {
+        border-color: $color-danger;
+        box-shadow: 0 0 0 2px rgba($color-danger, 0.2);
+      }
+    }
+    
+    &--left-icon {
+      padding-left: $spacing-8;
+    }
+    
+    &--right-icon {
+      padding-right: $spacing-8;
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $text-muted;
+    
+    &--left {
+      left: $spacing-3;
+    }
+    
+    &--right {
+      right: $spacing-3;
+    }
+  }
+
+  &__error {
+    color: $color-danger;
+    font-size: 1rem;
+  }
+}

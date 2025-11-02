@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+// Theme Colors
+$color-primary: #2B3990;  // Deep Blue
+$color-secondary: #FF3366; // Pink
+$color-accent: #00E5FF;   // Cyan
+$color-danger: #FF4747;   // Red
+
+// Theme Color Variations
+$color-primary-light: color.adjust($color-primary, $lightness: 15%);
+$color-primary-dark: color.adjust($color-primary, $lightness: -15%);
+$color-secondary-light: color.adjust($color-secondary, $lightness: 15%);
+$color-secondary-dark: color.adjust($color-secondary, $lightness: -15%);
+
+// Background Colors
+$bg-dark: #121212;
+$bg-darker: #0A0A0A;
+$bg-light: #1E1E1E;
+$bg-lighter: #2D2D2D;
+
+// Text Colors
+$text-primary: #FFFFFF;
+$text-secondary: #B3B3B3;
+$text-muted: #808080;
+
+// Gradient Maps
+$gradient-primary: linear-gradient(135deg, $color-primary, $color-primary-dark);
+$gradient-secondary: linear-gradient(135deg, $color-secondary, $color-secondary-dark);
+$gradient-accent: linear-gradient(135deg, $color-accent, $color-primary);

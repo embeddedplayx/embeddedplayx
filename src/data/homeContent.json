@@ -1,0 +1,50 @@
+{{
+
+  "hero": {  "hero": {
+
+    "title": "Welcome to PlayX",    "title": "Welcome to EmbeddedPlayX Ranch",
+
+    "subtitle": "Your Ultimate Gaming Destination",    "subtitle": "Cute slimes, cozy ranches — build and collect.",
+
+    "backgroundImage": "/assets/hero-bg.jpg"    "backgroundImage": "/assets/slime1.svg"
+
+  },  },
+
+  "features": [  "features": [
+
+    {    {
+
+      "id": "library",      "id": "slime-collection",
+
+      "title": "Extensive Game Library",      "title": "Collect Slimes",
+
+      "text": "Access hundreds of premium games instantly"      "text": "Discover, feed and collect dozens of charming slimes.",
+
+    },      "image": "/assets/slime2.svg"
+
+    {    },
+
+      "id": "multiplayer",    {
+
+      "title": "Multiplayer Gaming",      "id": "ranch-building",
+
+      "text": "Play with friends or compete globally"      "title": "Build Your Ranch",
+
+    },      "text": "Grow your homestead with gardens, corrals, and decor.",
+
+    {      "image": "/assets/slime3.svg"
+
+      "id": "cloud",    },
+
+      "title": "Cloud Gaming",    {
+
+      "text": "Play anywhere, anytime with cloud saves"      "id": "exploration",
+
+    }      "title": "Explore the World",
+
+  ]      "text": "Venture into biomes to find rare slimes and treasures.",
+
+}      "image": "/assets/slime1.svg"
+    }
+  ]
+}
