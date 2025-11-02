@@ -120,26 +120,37 @@
 
 // Heading helper mixin - use like: @include heading('xl');
 @mixin heading($size) {
-  // Default settings
-  $font-family: t.$font-heading;
-  $font-weight: t.$weight-semibold;
-  $font-size: t.$text-xl;
+  font-family: t.$font-heading;
+  font-weight: t.$weight-bold;
+  line-height: t.$leading-tight;
+  letter-spacing: t.$tracking-tight;
+  margin: 0;
 
-  @if $size == 'xs' {
-    $font-size: t.$text-xs;
-  } @else if $size == 'sm' {
-    $font-size: t.$text-sm;
+  @if $size == 'sm' {
+    font-size: t.$text-lg;
   } @else if $size == 'md' {
-    $font-size: t.$text-lg;
+    font-size: t.$text-xl;
   } @else if $size == 'lg' {
-    $font-size: t.$text-2xl;
+    font-size: t.$text-2xl;
   } @else if $size == 'xl' {
-    $font-size: t.$text-3xl;
+    font-size: t.$text-3xl;
   } @else if $size == '2xl' {
-    $font-size: t.$text-4xl;
+    font-size: t.$text-4xl;
+  } @else {
+    font-size: t.$text-base;
   }
 
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-size: $font-size;
+  @include responsive('md') {
+    @if $size == 'sm' {
+      font-size: t.$text-xl;
+    } @else if $size == 'md' {
+      font-size: t.$text-2xl;
+    } @else if $size == 'lg' {
+      font-size: t.$text-3xl;
+    } @else if $size == 'xl' {
+      font-size: t.$text-4xl;
+    } @else if $size == '2xl' {
+      font-size: calc(#{t.$text-4xl} * 1.2);
+    }
+  }
 }

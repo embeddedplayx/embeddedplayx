@@ -1,7 +1,4 @@
-@import '../abstracts/colors.scss';
-@import '../abstracts/variables.scss';
-@import '../abstracts/mixins.scss';
-@import '../abstracts/typography.scss';
+@use '../abstracts' as *;
 
 .button {
   @include button-base;
@@ -21,28 +18,60 @@
   
   &--ghost {
     background: transparent;
-    color: #aa2421;
-    border: 1px solid #aa2421;
+    color: $color-primary;
+    border: 1px solid $color-primary;
     
     &:hover:not(:disabled) {
-      background: #aa2421;
+      background: rgba($color-primary, 0.1);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $text-primary;
+    border: 2px solid $text-primary;
+    
+    &:hover:not(:disabled) {
+      background: rgba($text-primary, 0.1);
+      transform: translateY(-1px);
+    }
+    
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  &--text {
+    background: transparent;
+    color: $color-primary;
+    padding: $spacing-2;
+    font-weight: $weight-medium;
+    
+    &:hover:not(:disabled) {
+      text-decoration: underline;
+      background: transparent;
+      transform: none;
+    }
+    
+    &:active:not(:disabled) {
+      color: darken($color-primary, 10%);
     }
   }
   
   // Sizes
-  &--sm {
+  &--small {
     padding: $spacing-2 $spacing-4;
-    font-size: 1rem;
+    font-size: $text-sm;
   }
   
-  &--md {
+  &--medium {
     padding: $spacing-3 $spacing-6;
-    font-size: 1rem;
+    font-size: $text-base;
   }
   
-  &--lg {
+  &--large {
     padding: $spacing-4 $spacing-8;
-    font-size: 2rem;
+    font-size: $text-lg;
   }
   
   &--full {

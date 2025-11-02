@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../styles/components/Button.scss';
 
-type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'ghost';
-type ButtonSize = 'sm' | 'md' | 'lg';
+type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'ghost' | 'outline' | 'text';
+type ButtonSize = 'small' | 'medium' | 'large';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -16,7 +16,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
-  size = 'md',
+  size = 'medium',
   isLoading = false,
   fullWidth = false,
   leftIcon,

@@ -58,14 +58,14 @@ const Navigation: React.FC<NavigationProps> = ({
               <>
                 <Button
                   variant="ghost"
-                  size="sm"
+                  size="small"
                   onClick={onLogin}
                 >
                   Log In
                 </Button>
                 <Button
                   variant="primary"
-                  size="sm"
+                  size="small"
                   onClick={onRegister}
                 >
                   Sign Up

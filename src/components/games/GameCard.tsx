@@ -1,7 +1,7 @@
 import React from 'react';
 import Card, { CardImage, CardBody, CardFooter } from '../common/Card';
 import Button from '../common/Button';
-import '../styles/components/GameCard.scss';
+import '../../styles/components/GameCard.scss';
 
 interface Game {
   id: string;
@@ -60,7 +60,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, onPlay, onDetails }) => {
           <div className="game-card__buttons">
             <Button
               variant="ghost"
-              size="sm"
+              size="small"
               onClick={onDetails}
             >
               Details
@@ -68,7 +68,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, onPlay, onDetails }) => {
             
             <Button
               variant="primary"
-              size="sm"
+              size="small"
               onClick={onPlay}
             >
               Play Now

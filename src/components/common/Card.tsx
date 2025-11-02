@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/components/Card.scss';
+import '../../styles/components/Card.scss';
 
 interface CardProps {
   variant?: 'default' | 'hover' | 'glass';

@@ -38,7 +38,7 @@ const Login: React.FC<LoginProps> = ({
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size="sm">
+    <Modal isOpen={isOpen} onClose={onClose} size="small">
       <div className="auth-form">
         <h2 className="auth-form__title">Welcome Back</h2>
         <p className="auth-form__subtitle">Sign in to continue playing</p>

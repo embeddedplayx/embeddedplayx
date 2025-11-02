@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="hero__cta">
             <Button 
               variant="primary"
-              size="lg"
+              size="large"
               onClick={onCtaClick}
             >
               {ctaText}

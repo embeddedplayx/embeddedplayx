@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import Navigation from './common/Navigation';
+import Footer from './Footer';
 import Login from './auth/Login';
 import '../styles/components/Navigation.scss';
-
-interface MainLayoutProps {
-  children: React.ReactNode;
-}
 
 const navItems = [
   { id: 'home', label: 'Home', href: '/' },
@@ -14,7 +12,7 @@ const navItems = [
   { id: 'about', label: 'About', href: '/about' }
 ];
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -35,14 +33,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       />
 
       <main className="layout__main">
-        {children}
+        <Outlet />
       </main>
 
-      <footer className="layout__footer">
-        <div className="container">
-          <p>© 2025 PlayX. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
 
       <Login
         isOpen={isLoginOpen}

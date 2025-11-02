@@ -1,6 +1,4 @@
-@import '../abstracts/colors.scss';
-@import '../abstracts/variables.scss';
-@import '../abstracts/mixins.scss';
+@use '../abstracts' as *;
 
 .modal {
   position: fixed;
@@ -34,17 +32,17 @@
     @include glass-effect;
     animation: modal-slide-up 0.3s ease-out;
     
-    &--sm {
+    &--small {
       width: 100%;
       max-width: 400px;
     }
     
-    &--md {
+    &--medium {
       width: 100%;
       max-width: 600px;
     }
     
-    &--lg {
+    &--large {
       width: 100%;
       max-width: 800px;
     }

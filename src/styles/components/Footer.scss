@@ -1,0 +1,129 @@
+@use '../abstracts' as *;
+
+.footer {
+  background: $bg-darker;
+  padding: $spacing-12 0 $spacing-4;
+  color: $text-primary;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-8;
+    margin-bottom: $spacing-8;
+    
+    @include responsive('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive('lg') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__brand {
+    h3 {
+      font-size: $text-2xl;
+      margin-bottom: $spacing-2;
+    }
+
+    p {
+      color: $text-secondary;
+    }
+  }
+
+  &__links {
+    h4 {
+      font-size: $text-lg;
+      margin-bottom: $spacing-4;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: $spacing-2;
+
+        a {
+          color: $text-secondary;
+          text-decoration: none;
+          transition: color $transition-fast ease;
+
+          &:hover {
+            color: $text-primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__social {
+    h4 {
+      font-size: $text-lg;
+      margin-bottom: $spacing-4;
+    }
+
+    &-icons {
+      display: flex;
+      gap: $spacing-4;
+
+      .social-icon {
+        color: $text-secondary;
+        text-decoration: none;
+        transition: color $transition-fast ease;
+
+        &:hover {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+
+  &__newsletter {
+    h4 {
+      font-size: $text-lg;
+      margin-bottom: $spacing-2;
+    }
+
+    p {
+      color: $text-secondary;
+      margin-bottom: $spacing-4;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: $spacing-2;
+
+    input {
+      flex: 1;
+      padding: $spacing-2 $spacing-3;
+      background: $bg-light;
+      border: 1px solid $bg-lighter;
+      border-radius: $radius-md;
+      color: $text-primary;
+      font-size: $text-sm;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
+      }
+
+      &::placeholder {
+        color: $text-secondary;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: $spacing-6;
+    border-top: 1px solid $bg-light;
+    text-align: center;
+
+    p {
+      color: $text-secondary;
+      font-size: $text-sm;
+    }
+  }
+}

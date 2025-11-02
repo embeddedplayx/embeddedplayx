@@ -1,0 +1,55 @@
+.about-page {
+  padding: 2rem;
+
+  section {
+    margin: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+
+    &.hero {
+      text-align: center;
+      background: var(--gradient-primary);
+      color: white;
+      padding: 6rem 1rem;
+      margin-top: 0;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        opacity: 0.9;
+      }
+    }
+
+    &.features {
+      background-color: var(--background-light);
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem;
+      }
+    }
+
+    &.story,
+    &.team {
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

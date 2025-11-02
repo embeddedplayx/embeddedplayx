@@ -5,7 +5,7 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
 }
 
@@ -13,7 +13,7 @@ const Modal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
   title,
-  size = 'md',
+  size = 'medium',
   children
 }) => {
   useEffect(() => {

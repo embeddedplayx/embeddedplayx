@@ -1,0 +1,69 @@
+.pricing-page {
+  padding: 2rem;
+  background-color: var(--background-light);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .pricing-card {
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+
+    &.recommended {
+      transform: scale(1.05);
+      border: 2px solid var(--primary-color);
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      margin: 1.5rem 0;
+      color: var(--primary-color);
+
+      .currency {
+        font-size: 1.5rem;
+        vertical-align: super;
+      }
+
+      .period {
+        font-size: 1rem;
+        color: var(--text-secondary);
+      }
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+
+      li {
+        margin: 0.5rem 0;
+        color: var(--text-secondary);
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}
