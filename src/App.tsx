@@ -1,9 +1,14 @@
 import React from 'react';
 import AppRoutes from './routes';
+import { AuthProvider } from './context/AuthContext';
 import './styles/main.scss';
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
+  );
 }
 
 export default App;
